@@ -41,7 +41,9 @@ This tool is designed for:
 
 ### Step 1: Download
 git clone https://github.com/DecryptiousOnGH/PhishKit-Builder
+
 cd PhishKit-Builder
+
 pip install -r requirements.txt
 
 ## Usage 
